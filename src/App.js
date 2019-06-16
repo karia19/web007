@@ -4,6 +4,7 @@ import NavBar from './component/Nav';
 import { Container } from 'semantic-ui-react';
 import Aboutme from './component/AboutMe';
 import Contact from './component/Contact'
+import Footer from './component/Footer'
 
 
 class App extends Component {
@@ -14,11 +15,9 @@ class App extends Component {
     return(
      <div className="container">
          <NavBar />
-         
          <Aboutme />
-        
-         
          <Contact />
+         <Footer />
    </div>
      
       

@@ -14,7 +14,8 @@ class Contact extends React.Component {
         return (
        <div className="Form">
             <h3 className="text-center">Contact</h3>
-                <p className="text-center"><em>We love our fans!</em></p>
+                <br></br>
+                <p className="text-center"><em></em></p>
              <div className="row test">
           <div className="col-md-4">
              <p>Drop a note.</p>
@@ -34,6 +35,7 @@ class Contact extends React.Component {
              <textarea className="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
               <div className="row">
                 <div className="col-md-12 form-group">
+                <br></br>
                 <button className="btn pull-right" type="submit">Send</button>
               </div>
           </div> 

@@ -17,7 +17,7 @@ class Firstpage extends React.Component {
        
 
         return(
-        <div className="container">
+        <div className="">
         <br>
         </br>
          <div  >
@@ -25,11 +25,11 @@ class Firstpage extends React.Component {
                 <img src={kuva1} alt="" width={"100%"} height={400} mode='fit' />  
             </div>
         </div>    
-        <div className="what">
+        <div className="container">
         <div className="row no-gutters">
             <div className="col-sm-6">
                <a href="/kuvatEka">
-                 <img  width={"100%"} height={300} src={kuva2}  alt="Null" mode='fit' />
+                 <img  width={"100%"} height={300} src={kuva2}  alt="Null" />
                
                  <div className="bottom-left">Bottom Left</div>
                </a>
