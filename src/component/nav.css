@@ -1,0 +1,102 @@
+
+.testi {
+    position: relative;
+    opacity: transparent;
+    top: 0px;
+   
+  
+    
+  }
+
+  .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:white;
+   
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    background-size: auto;
+
+
+    overflow-y: hidden;
+    transition: 0.7s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 7%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 7px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  .overlay p {
+    text-align: center;
+    color: #f1f1f1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .hoo2 {
+    text-align: center;
+    font-size: 29px;
+    
+    display: block
+
+  }
+  
+ 
+  .navlogos a{
+    margin: inherit;
+    display: block;
+    text-align: center;
+   
+    left: -300px;
+   
+    display: inline;
+  }
+  
+  
+  .navbaar {
+    position: fixed;
+  
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+   
+  }
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
