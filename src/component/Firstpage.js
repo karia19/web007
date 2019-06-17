@@ -5,6 +5,10 @@ import kuva1 from '../images/first.jpg'
 import kuva2 from '../images/k1.jpg'
 import kuva3 from '../images/last.jpg'
 import kuva4 from '../images/33.jpg'
+import AboutMe from '../component/AboutMe';
+import Contact from '../component/Contact'
+
+import Shop from '../component/Shop';
 
 
 
@@ -25,7 +29,7 @@ class Firstpage extends React.Component {
                 <img src={kuva1} alt="" width={"100%"} height={400} mode='fit' />  
             </div>
         </div>    
-        <div className="container">
+        <div className="oma">
         <div className="row no-gutters">
             <div className="col-sm-6">
                <a href="/kuvatEka">
@@ -47,7 +51,16 @@ class Firstpage extends React.Component {
              </a>
              </div>
 
-            </div>      
+            </div>   
+            <br></br>
+            <br></br>
+            <AboutMe />
+            <br></br>
+            <br></br>
+            <br></br>
+            <Shop />
+            <Contact />  
+
          </div>    
     
            

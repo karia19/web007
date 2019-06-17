@@ -2,7 +2,7 @@
 .testi {
     position: relative;
     opacity: transparent;
-    top: 0px;
+    top: 3px;
    
   
     
@@ -53,10 +53,12 @@
   }
   
   .hoo2 {
-    text-align: center;
+    text-align: right;
     font-size: 29px;
+    padding: 0pc;
+    font-family: "Montserrat", sans-serif;
     
-    display: block
+    
 
   }
   

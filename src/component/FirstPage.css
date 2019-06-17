@@ -1,17 +1,4 @@
-.ownGrid {
-    
-    border: 0%;
-    position: relative;
-  
-    padding: 0px;
-    margin:0;
-   
-    margin-top: -4px;
-    
-    
-    
-    
-}
+
 .what{
     margin:0;
     padding:0;
@@ -26,7 +13,4 @@
     position: absolute;
     bottom: 8px;
     left: 16px;
-}
-* {
-  box-sizing: border-box;
 }

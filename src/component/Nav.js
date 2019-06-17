@@ -34,9 +34,9 @@ class Nav extends React.Component {
                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
           
               <div className="overlay-content">
-               <a href="/eka">About</a>
-               <a href="/blogs">Services</a>
-               <a href="/home">Clients</a>
+               <a href="/">Home</a>
+               <a href="/portfolio">Portfolio</a>
+               <a href="/cv">CV</a>
                <a href="/contact">Contact</a>
              </div>
            </div>
@@ -46,7 +46,7 @@ class Nav extends React.Component {
               
            </div>
            </div>
-           <FirstPageContent />
+          
          </div>
         
            

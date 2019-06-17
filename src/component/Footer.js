@@ -22,6 +22,7 @@ class Footer extends React.Component {
 
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-flickr"></a>
+            <a href="#" class="fa fa-youtube"></a>
              <br></br>
            
            

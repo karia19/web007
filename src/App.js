@@ -1,11 +1,11 @@
 import React , {Component} from 'react';
 import './App.css';
 import NavBar from './component/Nav';
-import { Container } from 'semantic-ui-react';
-import Aboutme from './component/AboutMe';
-import Contact from './component/Contact'
-import Footer from './component/Footer'
 
+import Footer from './component/Footer'
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import FirstPage from './component/Firstpage';
+import Images1 from './component/Images1';
 
 class App extends Component {
 
@@ -14,10 +14,20 @@ class App extends Component {
 
     return(
      <div className="container">
-         <NavBar />
-         <Aboutme />
-         <Contact />
-         <Footer />
+       <Router>
+
+       
+        <NavBar />
+        
+        
+        
+           <Route exact path="/" render={() => <FirstPage />} /> 
+           <Route path="/portfolio" render= {() => <Images1 />} />
+       
+        <Footer />
+       
+       </Router>
+        
    </div>
      
       

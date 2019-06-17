@@ -19,22 +19,6 @@ class AboutMe extends React.Component {
             "background-color": "brown",
             display:"block"
         }
-/*
-        <div className="text-center">
-       
-        <div className="col-md-6">
-          <img src={profile} width={"100%"} height={"350px"}></img>
-      </div>
-      <div class="col-md-6" style={color}>
-        <h2 class="w3-wide">About Me</h2>
-        <p class="w3-opacity"><i>We love music</i></p>
-        <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       </div>
-       </div>
-      </div>
-      */
 
         return(
 
@@ -46,14 +30,13 @@ class AboutMe extends React.Component {
             <div className="bioText">
               <h2 class="w3-wide">About Me</h2>
               <p class="w3-opacity"><i>We love music</i></p>
-              <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="w3-justify"> 
+              Pekka Parviainen on helsinkiläinen kuvataiteilija jonka tuotannossa keskeiset teemat ovat luonto itsessään ja ihmisen luontosuhde. Monissa teoksissa luontoaiheet ovat lähtökohtana, mutta aiheen käsittely on hyvin vapaata ja teos vaikuttaa lähes abstraktilta. Parviainen työskentelee pääasiassa taidemaalarina, mutta grafiikalla on kautta linjan ollut tärkeä asema hänen tuotannossaan. Grafiikan tekeminen on vaikuttanut suuresti myös maalauksiin ja välillä erilaiset tekniikat lähes sulautuvat toisiinsa.</p>
               </div>
            
             </div>
             <div className="col-sm-6">
-                <img src={profile} alt="" style={color2} width={"100%"} height={400} />
+                <img src="http://pekkaparviainen.com/contactkuva.jpg" alt="" style={color2} width={"100%"} height={600} />
        
        </div>
        </div>
