@@ -7,6 +7,10 @@ import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import FirstPage from './component/Firstpage';
 import Images1 from './component/Images1';
 
+import TestLightbox from './component/LightBox'
+
+import ModalTest from './component/ModalTest';
+
 class App extends Component {
 
 
@@ -22,7 +26,8 @@ class App extends Component {
         
         
            <Route exact path="/" render={() => <FirstPage />} /> 
-           <Route path="/portfolio" render= {() => <Images1 />} />
+           <Route path="/portfolio" render= {() => <ModalTest />} />
+          
        
         <Footer />
        

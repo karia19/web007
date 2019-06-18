@@ -8,6 +8,10 @@ import kuva4 from '../images/33.jpg'
 import AboutMe from '../component/AboutMe';
 import Contact from '../component/Contact'
 
+import pekka1 from '../images/pekka1.jpg'
+import pekka2 from '../images/pekka3.jpg'
+
+
 import Shop from '../component/Shop';
 
 
@@ -33,7 +37,7 @@ class Firstpage extends React.Component {
         <div className="row no-gutters">
             <div className="col-sm-6">
                <a href="/kuvatEka">
-                 <img  width={"100%"} height={300} src={kuva2}  alt="Null" />
+                 <img  width={"100%"} height={300} src={pekka2}  alt="Null" />
                
                  <div className="bottom-left">Bottom Left</div>
                </a>
@@ -41,7 +45,7 @@ class Firstpage extends React.Component {
            </div>
              <div className="col-sm-6">
              <a href="/kuvatToka">
-               <img  width={"100%"} height={300} alt="toka" src={kuva3}/>
+               <img  width={"100%"} height={300} alt="toka" src={pekka1}/>
              </a>
         </div>
         </div>
