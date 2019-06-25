@@ -1,8 +1,7 @@
 import React from 'react'
 import { Card } from 'semantic-ui-react';
-import profile from '../images/AboutMe.jpg'
-import testiKuva from'../images/first.jpg'
-import testiKaksi from '../images/k1.jpg';
+import profile from '../images/contactkuva.jpg'
+
 import './AboutMe.css';
 
 class AboutMe extends React.Component {
@@ -11,7 +10,7 @@ class AboutMe extends React.Component {
 
     render() {
         const color2 = {
-           "padding-left": "px"
+           "paddingLeft": "px"
             
         }
 
@@ -28,18 +27,26 @@ class AboutMe extends React.Component {
             <div className="col-sm-6 ">
             <br></br>
             <div className="bioText">
-              <h2 class="w3-wide">About Me</h2>
-              <p class="w3-opacity"><i>We love music</i></p>
-              <p class="w3-justify"> 
+              <h2 className="w3-wide">About Me</h2>
+              <p className="w3-opacity"><i>Fi</i></p>
+              <p className="w3-justify"> 
               Pekka Parviainen on helsinkiläinen kuvataiteilija jonka tuotannossa keskeiset teemat ovat luonto itsessään ja ihmisen luontosuhde. Monissa teoksissa luontoaiheet ovat lähtökohtana, mutta aiheen käsittely on hyvin vapaata ja teos vaikuttaa lähes abstraktilta. Parviainen työskentelee pääasiassa taidemaalarina, mutta grafiikalla on kautta linjan ollut tärkeä asema hänen tuotannossaan. Grafiikan tekeminen on vaikuttanut suuresti myös maalauksiin ja välillä erilaiset tekniikat lähes sulautuvat toisiinsa.</p>
-              </div>
-           
+             
+
+              <p className="w3-opacity"><i>En</i></p>
+              <p className="w3-justify"> 
+              Pekka Parviainen is a Helsinki-based painter and graphic artist. He works with oil and tempera painting and lithographic techniques.
+
+              The two main themes in Parviainen's work are Nature itself and man's relationship to it. Nature is seen as both fragile and powerful at the same time. For Parviainen, the natural environment provides an endless source of forms as a starting point for his art. The subject is often treated freely and the level of detail is reduced for clarity.
+               </p>
+               </div>
             </div>
             <div className="col-sm-6">
-                <img src="http://pekkaparviainen.com/contactkuva.jpg" alt="" style={color2} width={"100%"} height={600} />
+                <img src={profile} alt="" style={color2} width={"100%"} height={600} />
        
        </div>
        </div>
+       <hr></hr>
       
        
        </div>

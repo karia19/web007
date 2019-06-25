@@ -11,6 +11,11 @@ import Contact from '../component/Contact'
 import pekka1 from '../images/pekka1.jpg'
 import pekka2 from '../images/pekka3.jpg'
 
+import image2 from '../imagesFronpage/2.jpg'
+import image3 from '../imagesFronpage/3.jpg'
+import image4 from '../imagesFronpage/4.jpg'
+import image5 from '../imagesFronpage/5.jpg'
+
 
 import Shop from '../component/Shop';
 
@@ -28,30 +33,38 @@ class Firstpage extends React.Component {
         <div className="">
         <br>
         </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
          <div  >
             <div>
-                <img src={kuva1} alt="" width={"100%"} height={400} mode='fit' />  
+                <img src={image5} alt="" width={"100%"} height={500} mode='fit' />  
             </div>
         </div>    
         <div className="oma">
         <div className="row no-gutters">
             <div className="col-sm-6">
                <a href="/kuvatEka">
-                 <img  width={"100%"} height={300} src={pekka2}  alt="Null" />
+                 <img  width={"100%"} height={300} src={image2}  alt="Null" />
                
-                 <div className="bottom-left">Bottom Left</div>
+                
                </a>
+           
               
            </div>
              <div className="col-sm-6">
              <a href="/kuvatToka">
-               <img  width={"100%"} height={300} alt="toka" src={pekka1}/>
+               <img  width={"100%"} height={300} alt="toka" src={image3}/>
              </a>
+           
         </div>
         </div>
              <div>
-             <a href="/jotain" >
-               <img src={kuva4} alt="" width={"100%"} height={350} />
+             <a href="/portfolio" >
+               <img src={image4} alt="" width={"100%"} height={400} />
              </a>
              </div>
 
@@ -63,6 +76,7 @@ class Firstpage extends React.Component {
             <br></br>
             <br></br>
             <Shop />
+            <hr></hr>
             <Contact />  
 
          </div>    

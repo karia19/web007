@@ -36,7 +36,10 @@
     padding: 0;
     width: 90%;
     max-width: 1200px;
+
   }
+
+
   
   /* The Close Button */
   .close {
@@ -56,6 +59,8 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+
+    
   
   }
   
@@ -136,5 +141,26 @@
   text-align: center;
 }
 
+.tauluNimi {
+ 
   
+}
+.works {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+}
+.works li {
+  display: inline;
+}
+.works a {
+  font-family: "Montserrat", sans-serif;
+  padding: 12px;
+  color: black;
+}
   
+.works a:hover {
+  background-color:gainsboro;
+}  
+

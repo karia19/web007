@@ -32,10 +32,15 @@ class Nav extends React.Component {
              <div className="testi"> 
                <div id="myNav" className="overlay">
                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
-          
+             
               <div className="overlay-content">
                <a href="/">Home</a>
                <a href="/portfolio">Portfolio</a>
+                <div className="works2">
+                   <a href="/">Maalaukset</a>
+                   <a href="/">Grafiikka</a>
+                   
+               </div>
                <a href="/cv">CV</a>
                <a href="/contact">Contact</a>
              </div>

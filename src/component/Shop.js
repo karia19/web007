@@ -1,13 +1,29 @@
 
 import React from 'react'
 import './shop.css'
+import axios from 'axios'
+import { async } from 'q';
 
 
 class Shop extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+          kuva: ''
+        }
+    }
+
+    
+   
 
 
 
     render() {
+        
+        /*
+        http://pekkaparviainen.com/kutsu.jpg
+        */
+
 
         return(
             <div>
@@ -16,7 +32,7 @@ class Shop extends React.Component {
           
              
                
-                 <img src="http://pekkaparviainen.com/kutsu.jpg" alt="" width={"100%"} height={500}/>
+                 <img src="http://localhost:3003/files/news" alt="" width={"100%"} height={500}/>
              
 
                 <hr></hr>
@@ -55,6 +71,7 @@ class Shop extends React.Component {
                
               
                 </div>
+                
             </div>
             </div>
                  

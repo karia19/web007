@@ -20,10 +20,12 @@ class MosalTest extends React.Component {
     }
     showModal = pram =>  e =>  {
         this.setState({show: true, name: pram.nimi , kuva: pram.taulu})
-        console.log(e.props)
+        
     }
     closeModal = () => {
-         this.setState({show:false})
+      
+            this.setState({show:false})
+      
     }
     getName = () => {
         console.log("komment")
@@ -32,11 +34,14 @@ class MosalTest extends React.Component {
 
     render() {
         const s = {
-            width: "100%"
+            width: "100%",
+          
 
         }
         const ss = {
-            "margin-bottom": "100px"
+             width: "100%",
+             height: "auto",
+             maxHeight: "700px"
         }
         
        
@@ -48,7 +53,7 @@ class MosalTest extends React.Component {
               <div className="modal-content"> 
               
              
-              <img src={this.state.kuva} width="100%" height={600} alt="n" /> 
+              <img src={this.state.kuva}  onClick={this.closeModal} style={ss} alt="n" /> 
              
               <div>
               <a className="close cursor" onClick={this.closeModal}>&times;</a> 
@@ -62,7 +67,11 @@ class MosalTest extends React.Component {
              
               
               </div>
-              <h3 className="omaTexti">{this.state.name}</h3>
+              <div className="tauluNimi">
+              <br></br>
+                  <h3 className="omaTexti">{this.state.name}</h3> 
+              </div>
+              <br></br>
               </div>
         } 
           
@@ -71,8 +80,14 @@ class MosalTest extends React.Component {
 
         return(
             <div>
-           
+              <br></br>
               <h3 className="text-center">Portfolio</h3>
+              <hr></hr>
+              <ul className="works">
+                 <li><a href="/">Maalaukset</a></li>
+                 <li><a href="/">Grafiikka</a></li>
+              </ul>
+              <br></br>
                <div className="w3-row" id="myGrid" style={ss}>
                </div>
                 <div className="row1">

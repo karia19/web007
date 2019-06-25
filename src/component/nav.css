@@ -2,7 +2,7 @@
 .testi {
     position: relative;
     opacity: transparent;
-    top: 3px;
+    top: 6px;
    
   
     
@@ -21,6 +21,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    opacity: 0.9;
 
 
     background-size: auto;
@@ -38,13 +39,22 @@
     margin-top: 30px;
   }
   
+   .overlay-content .works2 a {
+    font-size:  22px;
+    color:white;
+    text-decoration: underline;
+   }
+    
+  
   .overlay a {
-    padding: 7px;
+    padding: 10px;
     text-decoration: none;
-    font-size: 36px;
     color: white;
     display: block;
-    transition: 0.3s;
+    transition: 0.4s;
+  }
+  .overlay-content a {
+    font-size: 35px
   }
   .overlay p {
     text-align: center;
@@ -55,7 +65,7 @@
   .hoo2 {
     text-align: right;
     font-size: 29px;
-    padding: 0pc;
+    padding: 4px;
     font-family: "Montserrat", sans-serif;
     
     
@@ -83,13 +93,13 @@
    
   }
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: #0a0a0a;
   }
   
   .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
+    top: 0px;
+    right:30px;
     font-size: 60px;
   }
   
