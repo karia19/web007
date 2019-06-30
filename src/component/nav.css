@@ -16,8 +16,10 @@
     top: 0;
     left: 0;
     background-color:white;
+    background-image: url('../imagesFronpage/preludi.jpg');
+    
    
-    background-color: grey;
+    background-color:white;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -41,7 +43,7 @@
   
    .overlay-content .works2 a {
     font-size:  22px;
-    color:white;
+    color:black;
     text-decoration: underline;
    }
     
@@ -49,7 +51,7 @@
   .overlay a {
     padding: 10px;
     text-decoration: none;
-    color: white;
+    color: black;
     display: block;
     transition: 0.4s;
   }

@@ -70,9 +70,10 @@ class Contact extends React.Component {
 
         return (
        <div className="Form">
-       <Warn />
+      
             <h3 className="text-center">Contact</h3>
                 <br></br>
+                <Warn />
                 <p className="text-center"><em></em></p>
              <div className="row test">
           <div className="col-md-4">

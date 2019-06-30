@@ -1,7 +1,6 @@
 import React from 'react';
 import './nav.css';
 import FirstPageContent from './Firstpage';
-import { Container } from 'semantic-ui-react';
 
 class Nav extends React.Component {
 
@@ -37,8 +36,8 @@ class Nav extends React.Component {
                <a href="/">Home</a>
                <a href="/portfolio">Portfolio</a>
                 <div className="works2">
-                   <a href="/">Maalaukset</a>
-                   <a href="/">Grafiikka</a>
+                   <a href="/maalaukset">Maalaukset</a>
+                   <a href="/grafiikka">Grafiikka</a>
                    
                </div>
                <a href="/cv">CV</a>

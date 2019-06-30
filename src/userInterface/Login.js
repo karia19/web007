@@ -35,8 +35,9 @@ class Login extends React.Component {
           
         try {
             const res = await login(user);
-            this.props.logincontent(res.data.token)
-            window.localStorage.setItem('loginForInterface', res.data.username);
+            console.log(res)
+            this.props.logincontent(res.data.username)
+            window.localStorage.setItem('loginForInterface', res.data.token);
             //console.log(res.data.token)
 
         } catch (e) {
@@ -50,6 +51,7 @@ class Login extends React.Component {
         }, 3000)
          
     }
+    
     
     render() {
         const Warn = () => {
@@ -72,6 +74,7 @@ class Login extends React.Component {
            
             <div className="container">
             <h3>Login</h3>
+            <form>
             <div class="form-group mb-2">
                <label for="text">Username:</label>
               <input name="username" 
@@ -90,8 +93,8 @@ class Login extends React.Component {
                       class="form-control" 
                       id="pwd" />
             </div>
-             <button type="submit" onClick={this.send} class="btn btn-primary">Submit</button>
-    
+             <button type="submit"  onClick={this.send} class="btn btn-primary">Submit</button>
+            </form>
           
              </div>
             <br></br>

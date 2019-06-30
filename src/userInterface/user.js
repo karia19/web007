@@ -8,15 +8,37 @@ import axios from 'axios'
 import MessageAlert from '../messageComponent/message'
 
 
+
 class User extends React.Component {
 
     constructor(props) {
         super(props)
           this.state = {
               file: null,
-              option: ""
+              option: "",
+              images: [],
+              token: ""
+              
           }
     }
+  
+
+    componentDidMount() {
+        const logginUser = window.localStorage.getItem('loginForInterface');
+        this.setState({ token: logginUser })
+       // const conf = { headers: { 'Authorization': logginUser}};
+
+
+        const result = axios.get('http://localhost:3003/files')
+        result.then((res, error) => {
+           this.setState({ images: res.data }) 
+           //console.log(res.data);
+        })
+       
+        
+    }
+   
+
     loadImage = (event) => {
         //console.log(event.target.files[0]);
         this.setState({ file: event.target.files[0] })
@@ -26,7 +48,7 @@ class User extends React.Component {
         //console.log(event.target.value)
     }
     sendImage = async (event) => {
-        const config = { headers: { 'Content-Type': 'multipart/form-data' } };
+        const config = { headers: { 'Authorization': this.state.token, 'Content-Type': 'multipart/form-data' } };
         let fd = new FormData();
         fd.append('lista', this.state.option)
         fd.append('file', this.state.file);
@@ -35,6 +57,8 @@ class User extends React.Component {
             
             const res = await axios.post('http://localhost:3003/upload', fd, config )
             this.props.messaContent("Kuvan vaihtaminen onnistui")
+            const result = await axios.get('http://localhost:3003/files')
+            this.setState({ images: result})
 
         } catch (e) {
             this.props.messaContent("Jotain meni pieleen")
@@ -51,9 +75,8 @@ class User extends React.Component {
         window.location = "/";
     }
     render() {
+        console.log("omat" , this.state.images);
         
-
-
         return (
             <div>
             <div className="container">
@@ -65,7 +88,6 @@ class User extends React.Component {
             <p className="text-center display-10 my-10">Tästä voit vaihtaa kuvaa valitsemalla ensin
              kuvan mikä vaihdetaan ja sitten valitsemalla tilalle uuden</p>
         
-            <div className="row">
              <div className="col-sm-6">
                 <div className="form-group mp-3">
         
@@ -87,34 +109,52 @@ class User extends React.Component {
                      <button className="btn btn-light" onClick={this.sendImage} >Send</button>
                  </form>
               </div>
-             </div>
               
+
+            
         
               
+              </div>
+              <div className="row">
+              {this.state.images.map((x, index) => 
+              <div className="col-sm-4"> 
+              <div className="card-body mb-3">    
+              <img src= {`http://localhost:3003/files/${x.filename}`} width="100%" height="200" alt="" />
+              <p>{x.filename}</p>
+                <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
+                        <button class="btn btn-danger btn-block mt-4">Delete</button>
+                </form>
+              </div>
+              </div>
+              ) }
               </div>
               <hr></hr>
-              <div className="row">
-              <div className="col-sm-4"> 
-                  <p>News</p>  
-                  <img src="http://localhost:3003/files/news" width="100%" height="230" />
               </div>
-              <div className="col-sm-4">    
-                  <p>Etusivu eka</p>
-                  <img src="http://localhost:3003/files/etusivuEka" width="100%" height="230" />
-              </div>
-              <div className="col-sm-4">
-                  <p>Etusivu toka vasen</p>    
-                  <img src="http://localhost:3003/files/etusivuTokaVasen" width="100%" height="230" />
-              </div>
+              <div class="col-sm-6">
+                <div class="form-group mp-3">
+                  <h3>Täytä myytävien taulujen tiedot</h3>
+                  <label for="sel1">Täytä taulun tiedot</label>
+                   <form  encType="multipart/form-data" >
+                    <label for="usr">Taulun nimi</label>
+                    <input name="tauluNimi" type="text" class="form-control" id="usr"></input>
         
-            </div>
-            </div>
-            <div className="row">
-            <div className="col-sm-4">
-                <p>Etusivu toka oikea</p>
-                <img src="http://localhost:3003/files/etusivuTokaOikea" width="100%" height="230" />
-            </div>
-            </div>
+                    <label for="usr">Kuvaus</label>
+                    <textarea name="kuvaus" class="form-control" rows="5" id="comment" ></textarea>
+        
+                    <label for="usr">Hinta</label>
+                    <input name="hinta" type="text" class="form-control" id="usr"></input>
+                   
+                    <br></br>
+                    <p>Muista kuva formaatti jpg tai jpeg</p>
+                 
+                     <input  type="file" name="file" id="file" ></input>
+                    <button class="btn btn-light">Send</button> 
+                  </form>
+              </div>
+              </div>
+             
+             
+           
             <br></br>
             <br></br>
             </div>

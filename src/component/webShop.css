@@ -1,0 +1,25 @@
+.shop {
+
+}
+
+.texti {
+    text-align: left;
+}
+.oma2 {
+    /*background-image: url("http://pekkaparviainen.com/gaia.jpg"); */ 
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px
+    
+}
+a {
+    color: black;
+}
+
+.webShop {
+    font-family: "Montserrat", sans-serif;
+
+}
+.otsikko {
+    text-align: center;
+}

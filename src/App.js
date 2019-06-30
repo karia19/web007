@@ -11,7 +11,9 @@ import { connect } from 'react-redux'
 import { logincontent } from './reducer/loginReducer'
 import { messaContent } from './reducer/messageReducer'
 import Contact from './component/Contact';
-
+import WebShop from './component/WebShop';
+import Maalaukset from './component/Maalaukset'
+import Grafiikka from './component/Grafiikka';
 
 import ModalTest from './component/ModalTest';
 import Cv from './component/Cv'
@@ -37,6 +39,17 @@ class App extends Component {
            <Route path="/portfolio" render= {() => <ModalTest />} />
            <Route path="/cv" render = {() => <Cv />} />
            <Route path="/contact" render = {() => <Contact />} />
+           <Route path="/webshop" render = {() => <WebShop />} />
+
+           <Route path="/maalaukset" render = {() => <Maalaukset />} />
+           <Route path="/grafiikka" render = {() => <Grafiikka />} />
+
+           <Route path="/testi" component={() => {
+             window.location.href = 'http://localhost:3003/react';
+             return null
+           }} />
+
+
 
 
            <Route path="/userinterface" render = {() =>
