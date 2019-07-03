@@ -12,7 +12,8 @@ class Contact extends React.Component {
          name: "",
          email: "",
          comments: "",
-         warning: null
+         warning: null,
+         success: null
        } 
       
   }
@@ -23,26 +24,32 @@ class Contact extends React.Component {
   send = async (event) => {
     event.preventDefault()
     console.log(this.state.comments)
-    const url = 'http://localhost:3003/api/form'
+    const url = 'http://localhost:3003/lomake'
   
     if (this.state.comments === "" || this.state.email === "" || this.state.name === ""){
-      this.setState({ warning: "Something is missing"})
+      this.setState({ warning: "Tarkista lomakkeen kohdat"})
 
     } else {
       const mail = {
         to: "",
         replyTo: this.state.email,
         subject: this.state.name,
-        html: this.state.comments
+        text: this.state.comments
 
       }
 
-      const res = axios.post(url , mail)
-      console.log(res)
+      const res = await axios.post(url , mail)
+      if (res.status === 200) {
+        this.setState({ success: "Viestin lähetys onnistui"})
+      } else {
+        this.setState({ warning: "Viestin lähetys epäonnistui"})
+      }
       
     }
     setTimeout(() => {
       this.setState({ warning: null })
+      this.setState({ success: null })
+      this.setState({ comments: "" , email: "" , name: "" });
     }, 3000)
      
 
@@ -66,6 +73,17 @@ class Contact extends React.Component {
           return (<div></div>)
         }
       }
+      const Sucsess = () => {
+        if(this.state.success !== null){
+          return (<div className="alert alert-success">
+               <strong>{this.state.success}</strong>
+              </div>
+
+          )
+        } else {
+          return (<div></div>)
+        }
+      }
 
 
         return (
@@ -74,10 +92,11 @@ class Contact extends React.Component {
             <h3 className="text-center">Contact</h3>
                 <br></br>
                 <Warn />
+                <Sucsess />
                 <p className="text-center"><em></em></p>
              <div className="row test">
           <div className="col-md-4">
-             <p>Drop a note.</p>
+            
              <p><span className="glyphicon glyphicon-map-marker"></span>Helsinki, Finland</p>
              <p><span className="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
              <p><span className="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p> 
@@ -88,7 +107,7 @@ class Contact extends React.Component {
             <input className="form-control" 
                           id="name" 
                           name="name"
-                          placeholder="Name" 
+                          placeholder="Title" 
                           value={this.state.name}
                           onChange={this.getInfo}
                           type="text" required />

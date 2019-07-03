@@ -56,7 +56,7 @@ class Login extends React.Component {
     render() {
         const Warn = () => {
             if(this.state.warning !== null){
-              return (<div class="alert alert-danger">
+              return (<div className="alert alert-danger">
                    <strong>{this.state.warning}</strong>
                   </div>
     
@@ -75,7 +75,7 @@ class Login extends React.Component {
             <div className="container">
             <h3>Login</h3>
             <form>
-            <div class="form-group mb-2">
+            <div className="form-group mb-2">
                <label for="text">Username:</label>
               <input name="username" 
                      type="text" 
@@ -84,7 +84,7 @@ class Login extends React.Component {
                      class="form-control" 
                      id="text" />
             </div>
-            <div class="form-group">
+            <div className="form-group">
                <label for="pwd">Password:</label>
                <input name="password" 
                       value={this.state.password}
@@ -93,7 +93,7 @@ class Login extends React.Component {
                       class="form-control" 
                       id="pwd" />
             </div>
-             <button type="submit"  onClick={this.send} class="btn btn-primary">Submit</button>
+             <button type="submit"  onClick={this.send} className="btn btn-primary">Submit</button>
             </form>
           
              </div>

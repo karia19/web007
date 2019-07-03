@@ -6,6 +6,7 @@ import { messaContent } from '../reducer/messageReducer';
 import { connect } from 'react-redux';
 import axios from 'axios'
 import MessageAlert from '../messageComponent/message'
+import { async } from 'q';
 
 
 
@@ -17,7 +18,8 @@ class User extends React.Component {
               file: null,
               option: "",
               images: [],
-              token: ""
+              token: "",
+              imageId: null
               
           }
     }
@@ -38,6 +40,7 @@ class User extends React.Component {
         
     }
    
+   
 
     loadImage = (event) => {
         //console.log(event.target.files[0]);
@@ -56,9 +59,12 @@ class User extends React.Component {
         try {
             
             const res = await axios.post('http://localhost:3003/upload', fd, config )
+            console.log(res)
+            
             this.props.messaContent("Kuvan vaihtaminen onnistui")
             const result = await axios.get('http://localhost:3003/files')
             this.setState({ images: result})
+            
 
         } catch (e) {
             this.props.messaContent("Jotain meni pieleen")
@@ -69,13 +75,37 @@ class User extends React.Component {
         }, 3000)
         
     }
+    getImageId = async (event) => {
+        const config = { headers: { 'Authorization': this.state.token }};
+        const id = event.target.value;
+
+        try {
+        const response = await axios.delete(`http://localhost:3003/files/${id}`, config);
+        if (response.status === 200) {
+            const result = await axios.get('http://localhost:3003/files')
+            this.setState({ images: result})
+        }
+        
+        //this.setState({ [event.target.name ]: event.target.value })
+        window.location = "/user"
+        } catch (e) {
+            this.props.messaContent("Jotain meni pieleen")
+        }
+
+    }
+    afterDelete = async () => {
+        const result = await axios.get('http://localhost:3003/files')
+        this.setState({ images: result})
+
+    }
+   
     
     logOut = () => {
+        this.props.logincontent(null);
         window.localStorage.clear();
         window.location = "/";
     }
     render() {
-        console.log("omat" , this.state.images);
         
         return (
             <div>
@@ -91,7 +121,7 @@ class User extends React.Component {
              <div className="col-sm-6">
                 <div className="form-group mp-3">
         
-                  <label for="sel1">Valitse kuva mikä vaihdetaan</label>
+                  <label htmlFor="sel1">Valitse kuva mikä vaihdetaan</label>
                    <form encType="multipart/form-data" >
                     <select onChange={this.loadOption} value={this.state.option} name="lista" class="form-control" id="sel1">
                       <option value=""></option>
@@ -116,24 +146,25 @@ class User extends React.Component {
               
               </div>
               <div className="row">
-              {this.state.images.map((x, index) => 
-              <div className="col-sm-4"> 
+              {this.state.images.map((x, index) =>  
+              <div className="col-sm-4" key={index}> 
               <div className="card-body mb-3">    
               <img src= {`http://localhost:3003/files/${x.filename}`} width="100%" height="200" alt="" />
               <p>{x.filename}</p>
-                <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
-                        <button class="btn btn-danger btn-block mt-4">Delete</button>
-                </form>
+              
+       
+                        <button onChange={this.getImageId}  value={x._id} class="btn btn-danger btn-block mt-4">Delete</button>
+               
               </div>
               </div>
               ) }
               </div>
               <hr></hr>
               </div>
-              <div class="col-sm-6">
-                <div class="form-group mp-3">
+              <div className="col-sm-6">
+                <div className="form-group mp-3">
                   <h3>Täytä myytävien taulujen tiedot</h3>
-                  <label for="sel1">Täytä taulun tiedot</label>
+                  <label htmlFor="sel1">Täytä taulun tiedot</label>
                    <form  encType="multipart/form-data" >
                     <label for="usr">Taulun nimi</label>
                     <input name="tauluNimi" type="text" class="form-control" id="usr"></input>
@@ -148,7 +179,7 @@ class User extends React.Component {
                     <p>Muista kuva formaatti jpg tai jpeg</p>
                  
                      <input  type="file" name="file" id="file" ></input>
-                    <button class="btn btn-light">Send</button> 
+                    <button className="btn btn-light">Send</button> 
                   </form>
               </div>
               </div>

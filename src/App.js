@@ -25,7 +25,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.props.user)
+    console.log("ssa", this.props.user)
     return(
      <div className="container">
        <Router>
@@ -54,12 +54,12 @@ class App extends Component {
 
            <Route path="/userinterface" render = {() =>
             this.props.user
-            ? <Redirect to="/user" />
-            : <Redirect to="/userinterface" />
+            ? <User />
+            : <Login />
             } />
 
-            <Route path="/userinterface" render={() => <Login />} />
-            <Route path="/user" render={() => <User />} />
+            
+           
           
        
         <Footer />
