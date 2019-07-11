@@ -1,0 +1,16 @@
+
+
+li {
+    font-weight: 100;
+    padding: 1px;
+    list-style-type: lower-greek;
+    font-size:12px;
+}
+
+
+.imageC {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

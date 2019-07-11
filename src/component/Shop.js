@@ -1,8 +1,7 @@
 
 import React from 'react'
 import './shop.css'
-import axios from 'axios'
-import { async } from 'q';
+
 
 
 class Shop extends React.Component {
@@ -28,18 +27,11 @@ class Shop extends React.Component {
         return(
             <div>
            
-            <h2 className="text-center">News</h2>
-          
-             
-               
-                 <img src="http://localhost:3003/files/news" alt="" width={"100%"} height={500}/>
-             
-
-                <hr></hr>
                <div className="oma">
                 <div className="row no-gutters">
                 <div className="col-sm-12">
-                  <h1 className="w3-center">Web Shops</h1><br></br>
+                <h1 className="omatexti"><a href="/portfolio">Web Shops</a></h1>
+                <br></br>
                   <h4>HELSINKI</h4>
                   <a className="w3-text-grey" href="http://bronda.fi/taiteilija/148/">GALLERY BRONDA</a> <br></br>
                   <a className="w3-text-grey" href="https://www.taidegraafikot.fi/taiteilija/parviainen-pekka/">GALLERY G</a> <br></br>

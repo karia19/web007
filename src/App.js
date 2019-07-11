@@ -3,29 +3,25 @@ import './App.css';
 import NavBar from './component/Nav';
 
 import Footer from './component/Footer'
-import { BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 import FirstPage from './component/Firstpage';
-import Images1 from './component/Images1';
-import User from './userInterface/user'
-import { connect } from 'react-redux'
-import { logincontent } from './reducer/loginReducer'
-import { messaContent } from './reducer/messageReducer'
+
 import Contact from './component/Contact';
 import WebShop from './component/WebShop';
 import Maalaukset from './component/Maalaukset'
 import Grafiikka from './component/Grafiikka';
 
 import ModalTest from './component/ModalTest';
-import Cv from './component/Cv'
-import Login from './userInterface/Login'
+import Cv from './component/Cv';
+
 
 
 
 class App extends Component {
-
-
+  
   render() {
-    console.log("ssa", this.props.user)
+   
+
     return(
      <div className="container">
        <Router>
@@ -33,7 +29,7 @@ class App extends Component {
        
         <NavBar />
         
-        
+
         
            <Route exact path="/" render={() => <FirstPage />} /> 
            <Route path="/portfolio" render= {() => <ModalTest />} />
@@ -52,13 +48,8 @@ class App extends Component {
 
 
 
-           <Route path="/userinterface" render = {() =>
-            this.props.user
-            ? <User />
-            : <Login />
-            } />
-
-            
+  
+         
            
           
        
@@ -73,16 +64,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    user: state.user,
-    message: state.message
-  }
-}
-
-
-export default connect (
-  mapStateToProps, {
-    logincontent, messaContent
-  },
-) (App)
+export default App;

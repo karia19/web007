@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card } from 'semantic-ui-react';
-import profile from '../images/contactkuva.jpg'
+
+import image1 from '../imagesFronpage/potrcolor1.jpg'
 
 import './AboutMe.css';
 
@@ -14,18 +14,14 @@ class AboutMe extends React.Component {
             
         }
 
-        const color = {
-            "background-color": "brown",
-            display:"block"
-        }
-
+      
         return(
 
           
        <div className="">
         <div className="row no-gutters">
             <div className="col-sm-6 ">
-            <br></br>
+            
             <div className="bioText">
               <h2 className="w3-wide">About Me</h2>
               <p className="w3-opacity"><i>Fi</i></p>
@@ -42,7 +38,7 @@ class AboutMe extends React.Component {
                </div>
             </div>
             <div className="col-sm-6">
-                <img src={profile} alt="" style={color2} width={"100%"} height={600} />
+                <img src={image1} alt="" style={color2} width={"100%"}  />
        
        </div>
        </div>

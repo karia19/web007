@@ -4,7 +4,6 @@ import './contact.css';
 import axios from 'axios';
 
 
-
 class Contact extends React.Component {
   constructor(props){
     super(props) 
@@ -87,8 +86,11 @@ class Contact extends React.Component {
 
 
         return (
+          <div>
+         
        <div className="Form">
-      
+        
+       
             <h3 className="text-center">Contact</h3>
                 <br></br>
                 <Warn />
@@ -137,6 +139,7 @@ class Contact extends React.Component {
           </div> 
          </div>
         </div>
+       </div>
        </div>
 
 

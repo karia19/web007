@@ -16,7 +16,6 @@
     top: 0;
     left: 0;
     background-color:white;
-    background-image: url('../imagesFronpage/preludi.jpg');
     
    
     background-color:white;
@@ -31,6 +30,7 @@
 
     overflow-y: hidden;
     transition: 0.7s;
+    
   }
   
   .overlay-content {
@@ -39,12 +39,17 @@
     width: 100%;
     text-align: center;
     margin-top: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+  }
+  a {
+    font-weight: normal;
   }
   
    .overlay-content .works2 a {
     font-size:  22px;
     color:black;
-    text-decoration: underline;
+   
    }
     
   
@@ -54,9 +59,16 @@
     color: black;
     display: block;
     transition: 0.4s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+
   }
   .overlay-content a {
-    font-size: 35px
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: normal;
+    font-weight: 260;
+
   }
   .overlay p {
     text-align: center;
@@ -68,10 +80,10 @@
     text-align: right;
     font-size: 29px;
     padding: 4px;
-    font-family: "Montserrat", sans-serif;
-    
-    
-
+    font-family: "Montserrat", sans-serif; 
+  }
+  .hoo2 a {
+    color: black;
   }
   
  
@@ -83,6 +95,7 @@
     left: -300px;
    
     display: inline;
+    
   }
   
   
@@ -95,7 +108,12 @@
    
   }
   .overlay a:hover, .overlay a:focus {
-    color: #0a0a0a;
+    color: black;
+    text-decoration: underline;
+    
+
+   
+    
   }
   
   .overlay .closebtn {
@@ -103,6 +121,7 @@
     top: 0px;
     right:30px;
     font-size: 60px;
+    font-weight: 260;
   }
   
   @media screen and (max-height: 450px) {
@@ -113,4 +132,33 @@
     top: 15px;
     right: 35px;
     }
+  }
+
+  .hoo2> a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+  
+ .hoo2 > a:hover {
+    color: #000;
+  }
+  .hoo2 > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .hoo2 > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }

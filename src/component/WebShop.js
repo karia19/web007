@@ -11,16 +11,15 @@ class WebShop extends React.Component {
             widht: "100%",
             
         }
-        const e = {
-          "font-size":"15px" 
-        }
+        
          
         return (
           
             <div className="webShop">
            
       
-            <h1 className="otsikko">Web Shop</h1>
+            <h2 className="text-center"><a href="/portfolio">Portolio</a></h2>
+
             <br></br>
            
             <div className="row">

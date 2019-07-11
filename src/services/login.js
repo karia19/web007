@@ -9,4 +9,4 @@ const login =  async (cre) => {
     return res;
 }
 
-export default login;
+export default login

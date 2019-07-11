@@ -1,6 +1,5 @@
 import React from 'react';
 import './nav.css';
-import FirstPageContent from './Firstpage';
 
 class Nav extends React.Component {
 
@@ -33,7 +32,7 @@ class Nav extends React.Component {
                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
              
               <div className="overlay-content">
-               <a href="/">Home</a>
+               <a href="/">Pekka Parviainen</a>
                <a href="/portfolio">Portfolio</a>
                 <div className="works2">
                    <a href="/maalaukset">Maalaukset</a>
@@ -46,7 +45,7 @@ class Nav extends React.Component {
            </div>
            
            <div className="navbaar">
-              <h2 className="hoo2"  >Firman nimi  <span className="navButton" style={sty} onClick={openNav}>&#9776;</span> </h2>
+              <h2 className="hoo2"><a href="/">Firman nimi</a>  <span className="navButton" style={sty} onClick={openNav}>&#9776;</span> </h2>
               
            </div>
            </div>
