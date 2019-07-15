@@ -31,7 +31,7 @@ class Firstpage extends React.Component {
          <br></br>
          <div>
             <div>
-                <img src={nimmari} alt="" width={"100%"} height={350} mode='fit' />  
+            <img className="imageC" width={"100%"} src={nimmari} alt="" />
             </div>
         </div>    
         <div className="oma">

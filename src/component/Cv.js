@@ -3,7 +3,15 @@ import './Cv.css'
 import kuva from '../imagesFronpage/logomusta.jpg'
 
 class Cs extends React.Component {
-
+  constructor(props){
+    super(props)
+    this.state = {
+        fin: true
+    }
+}
+vaihada = () => {
+   this.setState({ fin: false })
+}
 
     render () {
        
@@ -11,7 +19,10 @@ class Cs extends React.Component {
         return (
             <div>
             <img className="imageC" width={200} src={kuva} alt="" />
-            <h2 className="text-center">Resume</h2>
+            <h2 className="text-center" onClick={this.vaihada}>Resume</h2>
+            <div className="text-left">
+
+            </div>
             <br></br>
                <div  className="row">
                  <div className="col-sm-4">

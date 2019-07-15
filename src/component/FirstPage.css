@@ -112,3 +112,10 @@ h1 , h2 {
 .box:hover::after {
   opacity: 1;
 }
+.imageC {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 259px;
+  width: 100%;
+}
