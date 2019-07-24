@@ -45,7 +45,7 @@ class Nav extends React.Component {
            </div>
            
            <div className="navbaar">
-              <h2 className="hoo2"><a href="/">Firman nimi</a>  <span className="navButton" style={sty} onClick={openNav}>&#9776;</span> </h2>
+              <h2 className="hoo2"><a href="/">Pekka Parviainen</a>  <span className="navButton" style={sty} onClick={openNav}>&#9776;</span> </h2>
               
            </div>
            </div>

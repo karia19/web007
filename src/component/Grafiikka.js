@@ -25,7 +25,7 @@ import kuva21 from '../grafiikka/souvenir_w.jpg'
 import kuva22 from '../grafiikka/sykli.jpg'
 import kuva23 from '../grafiikka/theia.jpg'
 import kuva24 from '../grafiikka/verso.jpg'
-
+import kaarme from '../grafiikka/IMGP0927.jpg'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
 
@@ -138,7 +138,7 @@ class Grafiikka extends React.Component {
                     mainSrc={this.state.kuva}
                     imageTitle={this.state.name}
                   
-                    imageCaption={this.state.name}
+                    imageCaption={this.state.tiedot}
                     onCloseRequest={() => this.setState({ show: false })}
                     animationDuration={200}
                  
@@ -154,7 +154,7 @@ class Grafiikka extends React.Component {
               <hr></hr>
               <ul className="works">
                  <li><a href="/portfolio">Portfolio</a></li>
-                 <li><a href="/maalaukset">Maalaukseta</a></li>
+                 <li><a href="/maalaukset">Maalaukset</a></li>
               </ul>
               <br></br>
                <div className="w3-row" id="myGrid" style={ss}>
@@ -162,32 +162,34 @@ class Grafiikka extends React.Component {
                 <div className="row1">
                 
                  <div className="column">
-                 {grafiikka.map((x) => 
-                    <img src={x.kuva}  value="kksd"  onClick={this.showModal({taulu: x.kuva , nimi: x.nimi, tiedot: x.tiedot, id: x.id })} alt="noin" style={s} />
-                    
-                )}
+                 <img src={kuva4}  value="kksd"  onClick={this.showModal({taulu: kuva4 , nimi: "Illusio", tiedot:"2013	Litografia	72x100 cm"})} alt="noin" style={s} />
+                 <img src={kuva14}  value="kksd"  onClick={this.showModal({taulu: kuva14 , nimi: "Bios", tiedot:"2012	Litografia	74x74 cm"})} alt="noin" style={s} />
+                 <img src={kuva18}  value="kksd"  onClick={this.showModal({taulu: kuva18 , nimi: "Stamina", tiedot: "2017  	Litografia 	 29x43 cm"})} alt="noin" style={s} />
+                 <img src={kuva23}  value="kksd"  onClick={this.showModal({taulu: kuva23, nimi: "Theia", tiedot:"2015 	Litografia 	42x38 cm"})} alt="noin" style={s} />
+                 <img src={kuva13}  value="kksd"  onClick={this.showModal({taulu: kuva13, nimi: "Pandeon", tiedot:"2018	Lyijykynä	50x80 cm"})} alt="noin" style={s} />
+                 <img src={kuva21}  value="kksd"  onClick={this.showModal({taulu: kuva21, nimi: "Souvenir", tiedot:"2018	Lyijykynä	50x80 cm"})} alt="noin" style={s} />
+                 <img src={kuva11}  value="kksd"  onClick={this.showModal({taulu: kuva11, tiedot: "Gallery Kapriisi Tampere 2013"})} alt="noin" style={s} />
+                 
                 </div>
                 <div className="column">
-                   <img src={kuva18}  value="kksd"  onClick={this.showModal({taulu: kuva18 , nimi: "ornithology1"})} alt="noin" style={s} />
-                   <img src={kuva19}  value="kksd"  onClick={this.showModal({taulu: kuva19 , nimi: "Samsara"})} alt="noin" style={s} />
-                   <img src={kuva2}  value="kksd"  onClick={this.showModal({taulu: kuva2 , nimi: "Gaia", tiedot: "2017  Tempera on panel  81x61 cm"})} alt="noin" style={s} />
-                   <img src={kuva22}  value="kksd"  onClick={this.showModal({taulu: kuva22, nimi: "Sykli"})} alt="noin" style={s} />
-                   <img src={kuva4}  value="kksd"  onClick={this.showModal({taulu: kuva4, nimi: "Illusio"})} alt="noin" style={s} />
-                   <img src={kuva14}  value="kksd"  onClick={this.showModal({taulu: kuva14, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva12}  value="kksd"  onClick={this.showModal({taulu: kuva12, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva9}  value="kksd"  onClick={this.showModal({taulu: kuva9, nimi: ""})} alt="noin" style={s} />
+                   <img src={kuva16}  value="kksd"  onClick={this.showModal({taulu: kuva16 , nimi: "Luonnontila", tiedot:"2013 	Litografia	74x74 cm"})} alt="noin" style={s} />
+                   <img src={kuva19}  value="kksd"  onClick={this.showModal({taulu: kuva19 , nimi: "Samsara", tiedot:"2010 	 Litografia  	63X73 cm"})} alt="noin" style={s} />
+                   <img src={kuva5}  value="kksd"  onClick={this.showModal({taulu: kuva5 , nimi: "Illusionist", tiedot: "2015  	Litografia	  56x63 cm"})} alt="noin" style={s} />
+                   <img src={kuva1}  value="kksd"  onClick={this.showModal({taulu: kuva1, nimi: "Existentialist	", tiedot:"2015  	Litografia  	56x63 cm"})} alt="noin" style={s} />
+                   <img src={kaarme}  value="kksd"  onClick={this.showModal({taulu: kaarme, nimi: "Mimesis", tiedot:"2019	Lyijykynä	60x70 cm"})} alt="noin" style={s} />
+                   <img src={kuva24}  value="kksd"  onClick={this.showModal({taulu: kuva24, nimi: "Verso" ,tiedot:"2018	Lyijykynä 	83x107 cm"})} alt="noin" style={s} />
+                   <img src={kuva7}  value="kksd"  onClick={this.showModal({taulu: kuva7, tiedot: "Gallery Kajaste Oulu 2018"})} alt="noin" style={s} />
 
                 </div>
                 <div className="column">
-                   <img src={kuva17}  value="kksd"  onClick={this.showModal({taulu: kuva17 , nimi: "invertebrate"})} alt="noin" style={s} />
-                   <img src={kuva20}  value="kksd"  onClick={this.showModal({taulu: kuva20 , nimi: "Sole"})} alt="noin" style={s} />
-                   <img src={kuva3}  value="kksd"  onClick={this.showModal({taulu: kuva3 , nimi: "Here today"})} alt="noin" style={s} />
-                   <img src={kuva23}  value="kksd"  onClick={this.showModal({taulu: kuva23, nimi: "Theia"})} alt="noin" style={s} />
-                   <img src={kuva15}  value="kksd"  onClick={this.showModal({taulu: kuva15, nimi: ""})} alt="noin" style={s} />
+                   <img src={kuva2}  value="kksd"  onClick={this.showModal({taulu: kuva2 , nimi: "Gaia", tiedot:"2012	Litografia	74x74 cm"})} alt="noin" style={s} />
+                   <img src={kuva20}  value="kksd"  onClick={this.showModal({taulu: kuva20 , nimi: "Sole", tiedot:"2014 	Litografia  	52x55 cm"})} alt="noin" style={s} />
+                   <img src={kuva22}  value="kksd"  onClick={this.showModal({taulu: kuva22 , nimi: "Sykli", tiedot:"2010  	Litografia  	74x74 cm"})} alt="noin" style={s} />
+                   <img src={kuva15}  value="kksd"  onClick={this.showModal({taulu: kuva15, nimi: "Interdependence", tiedot:"2018	Lyijykynä 	94x112 cm"})} alt="noin" style={s} />
+                   <img src={kuva3}  value="kksd"  onClick={this.showModal({taulu: kuva3, nimi: "Here Today II", tiedot:"2018	Lyijykynä 	50x80 cm"})} alt="noin" style={s} />
                   
-                   <img src={kuva13}  value="kksd"  onClick={this.showModal({taulu: kuva13, nimi: "Pandeon"})} alt="noin" style={s} />
-                   <img src={kuva6}  value="kksd"  onClick={this.showModal({taulu: kuva6, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva7}  value="kksd"  onClick={this.showModal({taulu: kuva7, nimi: ""})} alt="noin" style={s} />
+                   <img src={kuva17}  value="kksd"  onClick={this.showModal({taulu: kuva17, nimi: "My favorite things", tiedot:"2018	Lyijykynä 	50x80 cm"})} alt="noin" style={s} />
+                   <img src={kuva6}  value="kksd"  onClick={this.showModal({taulu: kuva6, tiedot: "Gallery Kajaste Oulu 2018"})} alt="noin" style={s} />
 
              </div>
             </div>

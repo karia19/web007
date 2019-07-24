@@ -25,9 +25,15 @@ import kuva21 from '../maalaukset/they_see_us_v.jpg'
 import kuva22 from '../maalaukset/they_see_us_VI.jpg'
 import kuva23 from '../maalaukset/They_see_us1.jpg'
 import kuva24 from '../maalaukset/isola.jpg'
-
+import codex1 from '../maalaukset/codex_naturaeIV.jpg'
+import codex2 from '../maalaukset/codex_naturaeV.jpg'
+import codex3 from '../maalaukset/codex_naturaeI kopio.jpg'
+import codex4 from '../maalaukset/codex_naturae_vII.jpg'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import hirvi from '../maalaukset/Encounter_web.jpg'
+import korppi from '../maalaukset/they_see_us_IV_web.jpg'
+import ornito from '../maalaukset/ornithology2.jpg'
 
 
 
@@ -41,11 +47,12 @@ class Maalaukset extends React.Component {
         this.state = {
             show: false,
             name: "",
-            kuva: ""
+            kuva: "",
+            tiedot: ""
         }
     }
     showModal = pram =>  e =>  {
-        this.setState({show: true, name: pram.nimi , kuva: pram.taulu})
+        this.setState({show: true, name: pram.nimi , kuva: pram.taulu, tiedot: pram.tiedot})
         
     }
     closeModal = () => {
@@ -86,7 +93,7 @@ class Maalaukset extends React.Component {
                     mainSrc={this.state.kuva}
                     imageTitle={this.state.name}
  
-                    imageCaption={this.state.name}
+                    imageCaption={this.state.tiedot}
                     onCloseRequest={() => this.setState({ show: false })}
                     animationDuration={200}
                  
@@ -108,38 +115,48 @@ class Maalaukset extends React.Component {
                </div>
                 <div className="row1">
                  <div className="column">
-                    <img src={kuva16}  value="kksd"  onClick={this.showModal({taulu: kuva16 , nimi: "natura_borelias"})} alt="noin" style={s} />
-                    <img src={kuva12}  value="kksd"  onClick={this.showModal({taulu: kuva12 , nimi: "indigo"})} alt="noin" style={s} />
-                    <img src={kuva1}  value="kksd"  onClick={this.showModal({taulu: kuva1 , nimi: "they_see_us_IV_web"})} alt="noin" style={s} />
+                    <img src={kuva16}  value="kksd"  onClick={this.showModal({taulu: kuva16 , nimi: "Natura Borealis", tiedot: "2013	Öljyväri 	100x130 cm" })} alt="noin" style={s} />
+                    <img src={kuva12}  value="kksd"  onClick={this.showModal({taulu: kuva12 , nimi: "Indigo", tiedot: "2014	Öljyväri	100x130 cm"})} alt="noin" style={s} />
+                    <img src={kuva4}  value="kksd"  onClick={this.showModal({taulu: kuva4 , nimi: "Genius Loci I", tiedot: "2015	Öljyväri	50x40 cm" })} alt="noin" style={s} />
 
-                    <img src={kuva21}  value="kksd"  onClick={this.showModal({taulu: kuva21, nimi: "souvenir_w"})} alt="noin" style={s} />
-                    <img src={kuva24}  value="kksd"  onClick={this.showModal({taulu: kuva24, nimi: "Galleria Bronda"})} alt="noin" style={s} />
-                    <img src={kuva6}  value="kksd"  onClick={this.showModal({taulu: kuva6, nimi: "Galleria Bronda"})} alt="noin" style={s} />
-                    <img src={kuva10}  value="kksd"  onClick={this.showModal({taulu: kuva10, nimi: "Galleria Bronda"})} alt="noin" style={s} />
-                    <img src={kuva11}  value="kksd"  onClick={this.showModal({taulu: kuva11, nimi: "Galleria Bronda"})} alt="noin" style={s} />
+                    <img src={kuva15}  value="kksd"  onClick={this.showModal({taulu: kuva15, nimi: "Mirage", tiedot: "2014	Öljyväri	41x33 cm"})} alt="noin" style={s} />
+                    <img src={codex1}  value="kksd"  onClick={this.showModal({taulu: codex1, nimi: "Codex Naturae IV", tiedot:"2017	Tempera	40x61 cm"})} alt="noin" style={s} />
+                    <img src={codex4}  value="kksd"  onClick={this.showModal({taulu: codex4, nimi: "Codex Naturae VII", tiedot:"2017	Tempera	40x61 cm"})} alt="noin" style={s} />
 
-                </div>
-                <div className="column">
-                   <img src={kuva18}  value="kksd"  onClick={this.showModal({taulu: kuva18 , nimi: "ornithology1"})} alt="noin" style={s} />
-                   <img src={kuva19}  value="kksd"  onClick={this.showModal({taulu: kuva19 , nimi: "aarni"})} alt="noin" style={s} />
-                   <img src={kuva2}  value="kksd"  onClick={this.showModal({taulu: kuva2 , nimi: "They_see_us1"})} alt="noin" style={s} />
-                   <img src={kuva22}  value="kksd"  onClick={this.showModal({taulu: kuva22, nimi: "my_favourite_w"})} alt="noin" style={s} />
-                   <img src={kuva4}  value="kksd"  onClick={this.showModal({taulu: kuva4, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva14}  value="kksd"  onClick={this.showModal({taulu: kuva14, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva8}  value="kksd"  onClick={this.showModal({taulu: kuva8, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva5}  value="kksd"  onClick={this.showModal({taulu: kuva5, nimi: ""})} alt="noin" style={s} />
+                    <img src={kuva10}  value="kksd"  onClick={this.showModal({taulu: kuva10, tiedot: "Galleria Bronda 2014"})} alt="noin" style={s} />
+
+                    <img src={kuva8}  value="kksd"  onClick={this.showModal({taulu: kuva8, tiedot: "Galleria Bronda 2016"})} alt="noin" style={s} />
+
 
                 </div>
                 <div className="column">
-                   <img src={kuva17}  value="kksd"  onClick={this.showModal({taulu: kuva17 , nimi: "invertebrate"})} alt="noin" style={s} />
-                   <img src={kuva20}  value="kksd"  onClick={this.showModal({taulu: kuva20 , nimi: "they_see_us_II_W"})} alt="noin" style={s} />
-                   <img src={kuva3}  value="kksd"  onClick={this.showModal({taulu: kuva3 , nimi: "interdependence_w"})} alt="noin" style={s} />
-                   <img src={kuva23}  value="kksd"  onClick={this.showModal({taulu: kuva23, nimi: "verso"})} alt="noin" style={s} />
-                   <img src={kuva15}  value="kksd"  onClick={this.showModal({taulu: kuva15, nimi: ""})} alt="noin" style={s} />
+                   <img src={kuva18}  value="kksd"  onClick={this.showModal({taulu: kuva18 , nimi: "Natura Lux", tiedot:"2013	Öljyväri 	100x130 cm"})} alt="noin" style={s} />
+                   <img src={kuva19}  value="kksd"  onClick={this.showModal({taulu: kuva19 , nimi: "Natura Mare", tiedot: "2013	Öljyväri 	100x130 cm"})} alt="noin" style={s} />
+                   <img src={kuva13}  value="kksd"  onClick={this.showModal({taulu: kuva13 , nimi: "In Situ", tiedot:"2015  	Öljyväri	110x120 cm"})} alt="noin" style={s} />
+                   <img src={kuva14}  value="kksd"  onClick={this.showModal({taulu: kuva14, nimi: "In Summa", tiedot:"2015  	Öljyväri  	167x191 cm"})} alt="noin" style={s} />
+                   
+                   <img src={codex3}  value="kksd"  onClick={this.showModal({taulu: codex3, nimi: "Codex Naturae I", tiedot:"2017	Tempera	40x61 cm"})} alt="noin" style={s} />
+
+                   <img src={kuva22}  value="kksd"  onClick={this.showModal({taulu: kuva22, nimi: "They see us VI", tiedot:"2018	Tempera	80x61 cm"})} alt="noin" style={s} />
+                   <img src={ornito}  value="kksd"  onClick={this.showModal({taulu: ornito, nimi: "Ornithology II	2017", tiedot:"Tempera	100x130 cm"})} alt="noin" style={s} />
+
+
+
+                   <img src={kuva11}  value="kksd"  onClick={this.showModal({taulu: kuva11, tiedot: "Galleria Bronda 2018"})} alt="noin" style={s} />
+
+                </div>
+                <div className="column">
+                   <img src={kuva17}  value="kksd"  onClick={this.showModal({taulu: kuva17 , nimi: "Natura Imago", tiedot:"2014	Öljyväri 	100x130 cm"})} alt="noin" style={s} />
+                   <img src={kuva20}  value="kksd"  onClick={this.showModal({taulu: kuva20 , nimi: "Taiga", tiedot:"2013  	Öljyväri	 61x88 cm"})} alt="noin" style={s} />
+                   <img src={kuva6}  value="kksd"  onClick={this.showModal({taulu: kuva6 , nimi: "Unity", tiedot:"2015  	Öljyväri  	100x130 cm"})} alt="noin" style={s} />
+                   <img src={kuva24}  value="kksd"  onClick={this.showModal({taulu: kuva24, nimi: "Isola", tiedot:"2015	Öljyväri 	100x130 cm"})} alt="noin" style={s} />
+                   <img src={codex2}  value="kksd"  onClick={this.showModal({taulu: codex2, nimi: "Codex Naturae V", tiedot:"2017	Tempera	40x61 cm"})} alt="noin" style={s} />
                   
-                   <img src={kuva13}  value="kksd"  onClick={this.showModal({taulu: kuva13, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva9}  value="kksd"  onClick={this.showModal({taulu: kuva9, nimi: ""})} alt="noin" style={s} />
-                   <img src={kuva7}  value="kksd"  onClick={this.showModal({taulu: kuva7, nimi: ""})} alt="noin" style={s} />
+                   <img src={korppi}  value="kksd"  onClick={this.showModal({taulu: korppi, nimi: "They see us IV", tiedot:"2018	Tempera	81x61 cm"})} alt="noin" style={s} />
+                   <img src={hirvi}  value="kksd"  onClick={this.showModal({taulu: hirvi, nimi: "Encounter", tiedot:"2017	Tempera	100x130 cm"})} alt="noin" style={s} />
+
+                   <img src={kuva7}  value="kksd"  onClick={this.showModal({taulu: kuva7, tiedot: "Galleria Bronda 2016"})} alt="noin" style={s} />
+
 
              </div>
             </div>

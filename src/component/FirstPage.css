@@ -113,9 +113,9 @@ h1 , h2 {
   opacity: 1;
 }
 .imageC {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 259px;
-  width: 100%;
+  
+  height: 180px;
+  
 }
+
+

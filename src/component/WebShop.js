@@ -18,8 +18,8 @@ class WebShop extends React.Component {
             <div className="webShop">
            
       
-            <h2 className="text-center"><a href="/portfolio">Portolio</a></h2>
-
+            <h2 className="text-center">Web Shop</h2>
+            <hr></hr>
             <br></br>
            
             <div className="row">

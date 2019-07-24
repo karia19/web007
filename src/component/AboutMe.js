@@ -1,7 +1,5 @@
 import React from 'react'
-
-import image1 from '../imagesFronpage/potrcolor1.jpg'
-
+import image1 from '../imagesFronpage/image2.jpg'
 import './AboutMe.css';
 
 class AboutMe extends React.Component {
@@ -13,6 +11,8 @@ class AboutMe extends React.Component {
     }
     vaihada = () => {
        this.setState({ fin: false })
+       
+      
     }
 
 
@@ -29,7 +29,7 @@ class AboutMe extends React.Component {
                     <div>
                     <p className="w3-opacity"><i>Fi</i></p>
                     <p className="w3-justify"> 
-                     Pekka Parviainen on helsinkiläinen kuvataiteilija jonka tuotannossa keskeiset teemat ovat luonto itsessään ja ihmisen luontosuhde. <br></br>Monissa teoksissa luontoaiheet ovat lähtökohtana, mutta aiheen käsittely on hyvin vapaata ja teos vaikuttaa lähes abstraktilta. Parviainen työskentelee pääasiassa taidemaalarina, mutta grafiikalla on kautta linjan ollut tärkeä asema hänen tuotannossaan. <br></br>Grafiikan tekeminen on vaikuttanut suuresti myös maalauksiin ja välillä erilaiset tekniikat lähes sulautuvat toisiinsa.</p>
+                     Pekka Parviainen on helsinkiläinen kuvataiteilija jonka tuotannossa keskeiset teemat ovat luonto itsessään ja ihmisen luontosuhde. <br></br>Monissa teoksissa luontoaiheet ovat lähtökohtana, mutta <br></br>aiheen käsittely on hyvin vapaata ja teos vaikuttaa lähes abstraktilta. Parviainen työskentelee pääasiassa taidemaalarina,<br></br> mutta grafiikalla on kautta linjan ollut tärkeä asema hänen tuotannossaan. <br></br>Grafiikan tekeminen on vaikuttanut suuresti myös maalauksiin ja välillä erilaiset tekniikat lähes sulautuvat toisiinsa.</p>
                     </div> 
                      )
             } else {
@@ -51,6 +51,7 @@ class AboutMe extends React.Component {
 
           
        <div className="">
+
         <div className="row no-gutters">
             <div className="col-sm-6 ">
             
@@ -59,13 +60,13 @@ class AboutMe extends React.Component {
              
               <Language />
              
-              <button type="button" class="btn btn-sm-dark" onClick={this.vaihada} >
+              <button type="button" className="btn btn-sm-dark" onClick={this.vaihada} >
                  En
               </button>
                </div>
             </div>
             <div className="col-sm-6">
-                <img src={image1} alt="" style={color2} width={"100%"}  />
+                <img src={image1} alt="" style={color2} width={"100%"} height={"350px"} />
        
        </div>
        </div>

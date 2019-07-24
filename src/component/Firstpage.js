@@ -37,20 +37,23 @@ class Firstpage extends React.Component {
         <div className="oma">
         <div className="row no-gutters">
           
+         
             <div className="col-sm-6">
+           
                <a href="/grafiikka">
                  <img  width={"100%"}  src={testi1}  alt="Null" />
                
                 
                </a>
-           
-              
+          
            </div>
              <div className="col-sm-6">
+           
              <a href="/maalaukset">
                <img  width={"100%"}  alt="toka" src={testi2}/>
              </a>
            
+        
         </div>
         </div>
         <br></br>

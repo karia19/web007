@@ -17,9 +17,16 @@ import Cv from './component/Cv';
 
 
 
+
+
 class App extends Component {
   
+  
   render() {
+   
+   
+
+ 
    
 
     return(
@@ -33,7 +40,7 @@ class App extends Component {
         
            <Route exact path="/" render={() => <FirstPage />} /> 
            <Route path="/portfolio" render= {() => <ModalTest />} />
-           <Route path="/cv" render = {() => <Cv />} />
+           <Route path="/cv" render = {(props) => <Cv {...props} fin={true} />} />
            <Route path="/contact" render = {() => <Contact />} />
            <Route path="/webshop" render = {() => <WebShop />} />
 
