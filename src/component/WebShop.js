@@ -1,16 +1,32 @@
 
-import React from 'react'
+import React,{ useState , useEffect } from 'react'
 import './webShop.css'
+import WebShopItems from './webShopItems';
+import AxiosService  from '../service/images'
 
-class WebShop extends React.Component {
+const WebShop = () => {
+        const [ kuvat, setKuvat ] = useState([])
 
 
+        useEffect( ()  => {
+    
+          (async () => {
+           
+           const res = await AxiosService.getImages()
+           
+           setKuvat(res)
+           //const loggUser = window.localStorage.getItem('loginForInterface')
+          
+          })();
+        
+        }, [])
 
-    render() {
-        const s = {
-            widht: "100%",
-            
-        }
+        console.log(kuvat)
+
+        
+        
+
+
         
          
         return (
@@ -24,7 +40,7 @@ class WebShop extends React.Component {
            
             <div className="row">
             <div className="col-sm-3">
-                <h2>Taulut</h2>
+               
                 <p>Ota yhteyttä sinua kiinostavasta taulusta.
                  Hinnat eivät sisällä matkakuluja</p>
                 <h4>Grafiikka</h4>
@@ -46,7 +62,7 @@ class WebShop extends React.Component {
               
                 
                   <h4>JÄRVENPÄÄ:</h4>
-                  <a className="w3-text-grey" href="http://www.taikka.fi/">TAIDELAINAAMO</a>
+                  <a className="w3-text-grey" href="http://www.taikka.fi/">TAIDELAINAAMO TAIKKA</a>
                    <br></br>
                    <br></br>
                   
@@ -61,52 +77,26 @@ class WebShop extends React.Component {
                   <a className="w3-text-grey" href="https://holvi.com/shop/grafia13/">GRAFIA 13</a>
 
                  
-                </div>
-                
-               
-              
-                </div>
-                
+                </div>    
+                </div>      
             </div>
-            </div>
-
             
-            <div className="col-sm-3">
-            <div className="card" style={s}>
-              <img className="card-img-top" src="http://localhost:3003/files/etusivuEka" alt="Card image" />
-              <div className="card-body">
-              <h4 className="card-title">Taulu yksi</h4>
-              <p className="card-text">Some example text.</p>
-              <hr></hr>
-              <p>100 €</p> 
-              
-            
-           </div>
-           </div>
-           </div>
-           
-           <div className="col-sm-3">
-           <div className="card" style={s}>
-             <img className="card-img-top" src="http://localhost:3003/files/etusivuTokaVasen" alt="Card image" />
-             <div className="card-body">
-             <h4 className="card-title">John Doe</h4>
-             <p className="card-text">Some example text.</p>
-          </div>
-          </div>
-          </div>
+            </div>    
           
-          <div className="col-sm-3">
-          <div className="card" style={s}>
-            <img className="card-img-top" src="http://localhost:3003/files/etusivuEka" alt="Card image" />
-            <div className="card-body">
-            <h4 className="card-title">John Doe</h4>
-            <p className="card-text">Some example text.</p>
-         </div>
-         </div>
-           </div>
+            {kuvat.map(kuvat  =>  
+              <div className="col-sm-3">
+
+              <WebShopItems key={kuvat._id} kuvat={kuvat} />
+              </div>
+             )}
+           
+              
+            
         </div>
+
+
         <br></br>
-           <br></br>
+        <br></br>
         </div>
         
        
@@ -114,8 +104,8 @@ class WebShop extends React.Component {
           
           
         )
-    }
-}
+  }
+
 
 
 export default WebShop;

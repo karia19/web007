@@ -1,0 +1,29 @@
+
+
+.jumbotron {
+    background-image: url('../imagesFronpage/Immersio_w1.jpg');
+    text-align: center;
+    padding-top: 29rem;
+    padding-bottom: 0rem;
+    background-position: center center;
+  
+    background-size: cover;
+    color: rgb(150, 148, 146);
+    max-width: 400;
+   
+   
+    
+   
+  }
+  .lead {
+  
+    opacity: transparent;
+  }
+
+  
+  
+  .carousel-inner {
+    background-position: center center;
+    position: relative;
+  }
+  

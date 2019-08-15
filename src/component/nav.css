@@ -162,3 +162,8 @@
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+
+  .hoo2 img {
+    height: 50px;
+    width: 300px
+  }

@@ -100,8 +100,8 @@ class Contact extends React.Component {
           <div className="col-md-4">
             
              <p><span className="glyphicon glyphicon-map-marker"></span>Helsinki, Finland</p>
-             <p><span className="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-             <p><span className="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p> 
+             <p><span className="glyphicon glyphicon-phone"></span>Phone: +358505290356</p>
+             <p><span className="glyphicon glyphicon-envelope"></span>Email: postiparviainen@gmail.com</p> 
          </div>
           <div className="col-md-8">
             <div className="row">

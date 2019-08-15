@@ -112,9 +112,10 @@ h1 , h2 {
 .box:hover::after {
   opacity: 1;
 }
-.imageC {
+.uusiImage {
+  height: 780px;
   
-  height: 180px;
+  
   
 }
 

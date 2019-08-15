@@ -1,6 +1,5 @@
 import React from 'react';
 import './Cv.css'
-import kuva from '../imagesFronpage/logomusta.jpg'
 import CvFi from '../component/CvFi';
 import CvEn from '../component/CvEn';
 
@@ -38,7 +37,9 @@ vaihada = () => {
 
         return (
             <div>
-            <img className="imageC" width={200} src={kuva} alt="" />
+            <br></br>
+            <br></br>
+           
             <h2 className="text-center"> Resume</h2>
             <div className="text-left">
             <i className="fa fa-language" style={sty} onClick={this.vaihada}></i>

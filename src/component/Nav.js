@@ -1,5 +1,6 @@
 import React from 'react';
 import './nav.css';
+import nimmari from '../imagesFronpage/logomusta.jpg'
 
 class Nav extends React.Component {
 
@@ -15,7 +16,7 @@ class Nav extends React.Component {
             document.getElementById("myNav").style.height = "0%"
         }
         const sty = {
-          fontsize: "40px",
+          fontsize: "50px",
           cursor: "pointer",
           display: "inline",
          
@@ -29,23 +30,20 @@ class Nav extends React.Component {
           <div className="container">
              <div className="testi"> 
                <div id="myNav" className="overlay">
-               <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+               <a href="javascript:void(0)"  className="closebtn" onClick={closeNav}>&times;</a>
              
               <div className="overlay-content">
-               <a href="/">Pekka Parviainen</a>
-               <a href="/portfolio">Portfolio</a>
-                <div className="works2">
-                   <a href="/maalaukset">Maalaukset</a>
-                   <a href="/grafiikka">Grafiikka</a>
-                   
-               </div>
-               <a href="/cv">CV</a>
-               <a href="/contact">Contact</a>
+              
+               <a href="/home/maalaukset">Maalaukset</a>
+               <a href="/home/grafiikka">Grafiikka</a>
+                
+               <a href="/home/cv">CV</a>
+               <a href="/home/contact">Contact</a>
              </div>
            </div>
            
            <div className="navbaar">
-              <h2 className="hoo2"><a href="/">Pekka Parviainen</a>  <span className="navButton" style={sty} onClick={openNav}>&#9776;</span> </h2>
+              <h2 className="hoo2"><a href="/home"><img alt="" src={nimmari}/></a>  <span className="navButton" style={sty} onClick={openNav}>&#9776;</span> </h2>
               
            </div>
            </div>

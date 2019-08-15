@@ -30,32 +30,32 @@ class Shop extends React.Component {
                <div className="oma">
                 <div className="row no-gutters">
                 <div className="col-sm-12">
-                <h1 className="omatexti"><a href="/portfolio">Web Shops</a></h1>
+                <h2 className="omatexti"><a href="/home/webshop">Gallery Contacts</a></h2>
                 <br></br>
-                  <h4>HELSINKI</h4>
-                  <a className="w3-text-grey" href="http://bronda.fi/taiteilija/148/">GALLERY BRONDA</a> <br></br>
-                  <a className="w3-text-grey" href="https://www.taidegraafikot.fi/taiteilija/parviainen-pekka/">GALLERY G</a> <br></br>
-                  <a className="w3-text-grey" href="http://www.taidelainaamo.fi/public/go.php?action=works&filter=artist_id%3D17447">TAIDELAINAAMO</a>
+                  <h4>Helsinki</h4>
+                  <a className="w3-text-grey" href="http://bronda.fi/taiteilija/148/">Gallery Bronda</a> <br></br>
+                  <a className="w3-text-grey" href="https://www.taidegraafikot.fi/taiteilija/parviainen-pekka/">Gallery G</a> <br></br>
+                  <a className="w3-text-grey" href="http://www.taidelainaamo.fi/public/go.php?action=works&filter=artist_id%3D17447">Taidelainaamo</a>
                   <br></br>
                 
                   <br></br>
                 
               
                 
-                  <h4>JÄRVENPÄÄ:</h4>
-                  <a className="w3-text-grey" href="http://www.taikka.fi/">TAIDELAINAAMO</a>
+                  <h4>Järvenpää</h4>
+                  <a className="w3-text-grey" href="http://www.taikka.fi/">Taidelainaamo Taikka</a>
                    <br></br>
                    <br></br>
                   
-                  <h4>KOUVOLA:</h4>
-                  <a className="w3-text-grey" href="http://www.taidetupapikkuselma.com/taiteilijat.php?lh_ow=220&t_rr=1230&t_vv=hZ55k770&lcfd=10&r_mm=wpx_BB_tt550&txt=KHL_mm987440">TAIDETUPA PIKKUSELMA</a>
+                  <h4>Kouvola</h4>
+                  <a className="w3-text-grey" href="http://www.taidetupapikkuselma.com/taiteilijat.php?lh_ow=220&t_rr=1230&t_vv=hZ55k770&lcfd=10&r_mm=wpx_BB_tt550&txt=KHL_mm987440">Taidetupa Pikkuselma</a>
                   <br></br>
                   <br></br>
                  
-                  <h4>WEB:</h4>
-                  <a className="w3-text-grey" href="https://taiko.fi/artists/pekka-parviainen">TAIKO</a>
+                  <h4>Web</h4>
+                  <a className="w3-text-grey" href="https://taiko.fi/artists/pekka-parviainen">Taiko</a>
                   <br></br>
-                  <a className="w3-text-grey" href="https://holvi.com/shop/grafia13/">GRAFIA 13</a>
+                  <a className="w3-text-grey" href="https://holvi.com/shop/grafia13/">Grafia 13</a>
 
                  
                 </div>

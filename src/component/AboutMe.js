@@ -14,20 +14,32 @@ class AboutMe extends React.Component {
        
       
     }
+    
+    
 
 
 
     render() {
+        
         const color2 = {
-           "paddingLeft": "px"
+           "paddingLeft": "px",
+           "background-size": "cover",
+           position: 'relative',
+           'background-position': 'center center',
+           'max-width': '400'
+           
+
             
+        }
+        const s = {
+            color: 'rgb(150, 148, 146)'
         }
        
         const Language = () => {
             if(this.state.fin){
                 return(
                     <div>
-                    <p className="w3-opacity"><i>Fi</i></p>
+                    <p className="w3-opacity"></p>
                     <p className="w3-justify"> 
                      Pekka Parviainen on helsinkiläinen kuvataiteilija jonka tuotannossa keskeiset teemat ovat luonto itsessään ja ihmisen luontosuhde. <br></br>Monissa teoksissa luontoaiheet ovat lähtökohtana, mutta <br></br>aiheen käsittely on hyvin vapaata ja teos vaikuttaa lähes abstraktilta. Parviainen työskentelee pääasiassa taidemaalarina,<br></br> mutta grafiikalla on kautta linjan ollut tärkeä asema hänen tuotannossaan. <br></br>Grafiikan tekeminen on vaikuttanut suuresti myös maalauksiin ja välillä erilaiset tekniikat lähes sulautuvat toisiinsa.</p>
                     </div> 
@@ -56,7 +68,8 @@ class AboutMe extends React.Component {
             <div className="col-sm-6 ">
             
             <div className="bioText">
-              <h2 className="w3-wide">About Me</h2>
+              <h2 className="w3-wide">Pekka Parviainen</h2>
+              <h3 className="w3-wide" style={s}>Visual Artist</h3>
              
               <Language />
              
@@ -66,7 +79,7 @@ class AboutMe extends React.Component {
                </div>
             </div>
             <div className="col-sm-6">
-                <img src={image1} alt="" style={color2} width={"100%"} height={"350px"} />
+                <img src={image1} alt="" style={color2} width={"100%"}  />
        
        </div>
        </div>
