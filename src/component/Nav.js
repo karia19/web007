@@ -39,6 +39,7 @@ class Nav extends React.Component {
                 
                <a href="/home/cv">CV</a>
                <a href="/home/contact">Contact</a>
+               <a href="/home/webshop">Shop</a>
              </div>
            </div>
            

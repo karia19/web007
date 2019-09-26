@@ -32,7 +32,7 @@ class App extends Component {
    
 
     return(
-     <div className="container">
+     <div className="container1">
        <Router>
 
        

@@ -75,6 +75,7 @@ class Grafiikka extends React.Component {
                     imageCaption={this.state.tiedot}
                     onCloseRequest={() => this.setState({ show: false })}
                     animationDuration={200}
+                    //imagePadding={55}
                  
                  
                  

@@ -46,11 +46,11 @@ const WebShopItems = (props) => {
         <div className="card" style={s}>
         
           
-        <img className="card-image-top" onClick={showModal({taulu: `http://localhost:3003/api/files/${props.kuvat.filename}`, 
+        <img className="card-image-top" onClick={showModal({taulu: `https://pekkaparviainen.com/api/files/${props.kuvat.filename}`, 
         nimi: props.kuvat.metadata.artName,
         tiedot:props.kuvat.metadata.mitat})} 
         
-        src= {`http://localhost:3003/api/files/${props.kuvat.filename}`} width="100%" height="200" alt="" />
+        src= {`https://pekkaparviainen.com/api/files/${props.kuvat.filename}`} width="100%" height="300" alt="" />
         
        
         <div className="card-body">

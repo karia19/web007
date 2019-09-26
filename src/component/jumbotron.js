@@ -3,34 +3,21 @@
 import React from 'react'
 import '../component/Jumbo.css'
 
-import kuva1 from '../imagesFronpage/illusioWEB.jpg'
-import kuva2 from '../imagesFronpage/mimesis_1000.jpg'
-import kuva3 from '../imagesFronpage/Immersio_w1.jpg'
-import kuva4 from '../imagesFronpage/natura_borealis_1000.jpg'
+import kuva1 from '../imagesFronpage/illusio_1000.jpg'
+import kuva2 from '../imagesFronpage/mimesis_1000-2.jpg'
+import kuva3 from '../imagesFronpage/Immersio_w1-2.jpg'
+import kuva4 from '../imagesFronpage/natura_borealis_1000-2.jpg'
 import '../component/Jumbo.css'
 
 
 const Jumbo = () => {
 
-    let h
-    console.log(window.innerHeight)
-    if (window.innerHeight > 900 ) {
-        h = window.innerHeight - 500
-    } else if (window.innerHeight < 400) {
-        h = window.innerHeight + 90
-    } else if (window.innerHeight > 670){
-      h = window.innerHeight -100
-    }
-    
-    else {
-        h = window.innerHeight - 230
-    }
     
 
     const s = {
-      'background-size': 'cover',
+     
        position: 'relative',
-      'background-position': 'center center',
+      'background-position': 'center center'
       
       
 
@@ -51,33 +38,43 @@ const Jumbo = () => {
      */
 
     return(
-        <div id="demo" className="carousel slide" data-ride="carousel">
+        <div id="image" className="carousel slide" data-ride="carousel">
 
+        <ol className="carousel-indicators">
+          <li data-target="#image" data-slide-to="0" class="active"></li>
+          <li data-target="#image" data-slide-to="1"></li>
+          <li data-target="#image" data-slide-to="2"></li>
+          <li data-target="#image" data-slide-to="3"></li>
+
+        </ol>
         
     
         
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={kuva3} style={s} alt="" width="100%" height={h} />
+            <img src={kuva3} style={s}  alt=""  height="640px" />
           </div>
           <div className="carousel-item">
-            <img src={kuva2} alt="" style={s} width="100%" height={h} />
+            <img src={kuva2} alt="" style={s}  />
           </div>
           <div className="carousel-item">
-            <img src={kuva1} alt="" style={s} width="100%" height={h} />
+            <img src={kuva1} alt="" style={s} />
           </div>
           <div className="carousel-item">
-            <img src={kuva4} alt="" style={s} width="100%" height={h} />
+            <img src={kuva4} alt="" style={s} />
           </div>
           
         </div>
         
        
-        <a className="carousel-control-prev" href="#demo" data-slide="prev">
+        <a className="carousel-control-prev" href="#image" data-slide="prev">
           <span className="carousel-control-prev-icon"></span>
+          <span className="sr-only">Previous</span>
         </a>
-        <a className="carousel-control-next" href="#demo" data-slide="next">
+        <a className="carousel-control-next" href="#image" data-slide="next">
           <span className="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span>
+
         </a>
       </div>
     )

@@ -2,8 +2,8 @@
 import React from 'react'
 import './FirstPage.css'
 import AboutMe from '../component/AboutMe';
-import Jumbo from '../component/jumbotron'
-
+//import Jumbo from '../component/jumbotron'
+import Jumbo2 from '../component/jumbotron2'
 
 import Shop from '../component/Shop';
 
@@ -69,11 +69,13 @@ class Firstpage extends React.Component {
        
 
         return(
-        <div className="">
-        <br></br>
+        <div className=""> 
+        
+        <Jumbo2 />
+         
+        
 
-      
-        <Jumbo />
+       
 
          
            
@@ -82,10 +84,15 @@ class Firstpage extends React.Component {
             <br></br>
             
             <AboutMe />
+            
             <br></br>
             <div className="box">
                 <h3 className="text-center">News</h3>
-                <img src="http://pekkaparviainen.com/api/files/news" alt="" width={"100%"} />
+                <img src="http://pekkaparviainen.com/api/files/news" alt="" width={"100%"}
+                style={{maxHeight: "550px", "background-size": "cover",  position: 'relative',
+                'background-position': 'center center'}}
+                />
+
             </div>
             <br></br>
             <Shop />

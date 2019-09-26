@@ -23,7 +23,7 @@ class Contact extends React.Component {
   send = async (event) => {
     event.preventDefault()
     console.log(this.state.comments)
-    const url = 'http://localhost:3003/lomake'
+    const url = 'http://pekkaparviainen.com/lomake'
   
     if (this.state.comments === "" || this.state.email === "" || this.state.name === ""){
       this.setState({ warning: "Tarkista lomakkeen kohdat"})

@@ -88,6 +88,8 @@ class Maalaukset extends React.Component {
                     imageCaption={this.state.tiedot}
                     onCloseRequest={() => this.setState({ show: false })}
                     animationDuration={200}
+                    //imagePadding={55}
+                    
                  
                  
                  
@@ -106,7 +108,7 @@ class Maalaukset extends React.Component {
                </div>
                 <div className="row1">
                  <div className="column">
-                 <img src={eka}  value="kksd"  onClick={this.showModal({taulu: eka , nimi: "Immersio", tiedot: "2019	Tempera	167x191 cm"})} alt="noin" style={s} />
+                 <img src={eka}  value="kksd"  onClick={this.showModal({taulu: eka , nimi: "Existence", tiedot: "2019	Tempera	167x191 cm"})} alt="noin" style={s} />
                  <img src={hirvi}  value="kksd"  onClick={this.showModal({taulu: hirvi, nimi: "Encounter", tiedot:"2017	Tempera	100x130 cm"})} alt="noin" style={s} />
 
 
@@ -128,7 +130,7 @@ class Maalaukset extends React.Component {
                 <div className="column">
                 <img src={kolmas}  value="kksd"  onClick={this.showModal({taulu: kolmas , nimi: "Invertebrate", tiedot: "2017	Tempera	100x130 cm"})} alt="noin" style={s} />
 
-                <img src={kuudes}  value="kksd"  onClick={this.showModal({taulu: kuudes, nimi: "They see us I", tiedot: "2017	Tempera	81x61 cm"})} alt="noin" style={s} />
+                <img src={kuudes}  value="kksd"  onClick={this.showModal({taulu: kuudes, nimi: "Ornithology I", tiedot: "2018	Tempera	100x130 cm"})} alt="noin" style={s} />
 
                 <img src={kuva16}  value="kksd"  onClick={this.showModal({taulu: kuva16 , nimi: "Natura Borealis", tiedot: "2013	Öljyväri 	100x130 cm" })} alt="noin" style={s} />
 

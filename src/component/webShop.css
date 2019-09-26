@@ -7,9 +7,10 @@
 }
 .oma2 {
     /*background-image: url("http://pekkaparviainen.com/gaia.jpg"); */ 
-    text-align: left;
+    text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 15px
+    font-size: 15px;
+    padding-top: 32px;
     
 }
 a {
@@ -17,6 +18,13 @@ a {
     text-decoration: none;
 
 }
+.oma3 {
+    text-align: center;
+    padding-bottom: 30px;
+    color: black;
+
+}
+
 
 .webShop {
     font-family: "Montserrat", sans-serif;

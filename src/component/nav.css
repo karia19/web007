@@ -43,7 +43,9 @@
     font-weight: normal;
   }
   a {
-    font-weight: normal;
+    
+    text-decoration: none;
+    
   }
   
    .overlay-content .works2 a {
@@ -55,6 +57,8 @@
   
   .overlay a {
     padding: 10px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     color: black;
     display: block;

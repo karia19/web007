@@ -12,8 +12,10 @@
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-slick": "^0.25.2",
     "redux": "^4.0.1",
-    "semantic-ui-react": "^0.87.1"
+    "semantic-ui-react": "^0.87.1",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,8 +26,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:3003/home/",
-  "homepage": "http://localhost:3003/home/",
+  "proxy": "http://pekkaparviainen.com/home/",
+  "homepage": "http://pekkaparviainen.com/home/",
   "browserslist": {
     "production": [
       ">0.2%",
